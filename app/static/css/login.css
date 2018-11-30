@@ -46,11 +46,11 @@
 	background: #FFFFFF;
 	position: absolute;
 	right: 80px;
-	top: 80px;
+	top: 50px;
 	z-index: 2;
 	padding-left: 20px;
 	box-sizing: border-box;
-	/*display: none;*/
+	display: none;
 }
 
 #banner-wrap  .dl1{
@@ -60,7 +60,7 @@
 	position: absolute;
 	right: 80px;
 	top: 80px;
-	z-index: 2;
+	/*z-index: 2;*/
 	/*padding-left: 20px;*/
 	box-sizing: border-box;
 	/*display: none;*/
@@ -75,7 +75,10 @@
 	width: 140px;
 	height: 140px;
 	background: url(../images/TB137myswHqK1RjSZFkwu0.WFXa.png)no-repeat;
-	margin: 50px auto;
+	/*margin: 50px auto;*/
+	position: absolute;
+	left: 100px;
+	top: 100px;
 }
 .dl,   p{
 	font-weight: 900;
@@ -151,7 +154,7 @@
 	top: 6px;
 	cursor: pointer;
 }
-.dl,.dl1 .saoma{
+.dl .saoma{
 	display: block;
 	width: 100px;
 	height: 40px;
@@ -161,6 +164,17 @@
 	top: 10px;
 	right: 50px;
 }
+
+.dl1 .saoma{
+	display: block;
+	width: 100px;
+	height: 40px;
+	background: url(../images/QQ截图20181128211657.png)no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 10px;
+	right: 50px;
+} 
 .dl .wangji{
 	margin-top: 20px;
 	/*float: right;*/
@@ -175,12 +189,22 @@
 .dl .wangji a:hover{
 	color: red;
 }
-
+.dl1 .phone{
+	width: 120px;
+	height: 182px;
+	background: url(../images/img1.png)no-repeat;
+	position: absolute;
+	top: 65px;
+	right: 30px;
+	display: none;
+}
 .dl1 .sys{
-	width: 200px;
+	width: 220px;
 	height: 50px;
 	/*background: red;*/
-	margin: 0 auto;
+	position: absolute;
+	top: 250px;
+	left: 80px;
 }
 .dl1 .sys .icon-saoyisaoerweimasaomasaomiao1{
 	display: block;
@@ -189,17 +213,18 @@
 	background: url(../images/erweimadenglu.png)no-repeat;
 	background-size: 100%;
 	color: red;
-	margin-left: 30px;
+	margin-top: 3px;
 	margin-right: 5px;
 	float: left;
 }
 .dl1 .sys p{
 	height: 30px;
-	width: 180px;
+	width: 140px;
 	font-size: 12px;
 	color: red;
 	font-weight: normal;
-	/*float: left;*/
+	float: left;
+	margin: 0px;
 }
 .dl1 .sys p span{
 	font-size: 12px;
@@ -213,8 +238,10 @@
 .dl1 .wangji{
 	/*margin-top: 20px;*/
 	/*float: right;*/
-	width: 180px;
-	margin-left: 180px;
+	width: 150px;
+	position: absolute;
+	bottom: 30px;
+	right: 0px;
 }
 .dl1 .wangji a{
 	font-size: 12px;
