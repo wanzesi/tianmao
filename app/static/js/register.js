@@ -1,5 +1,4 @@
 var $tel = document.querySelector('.tel');
-console.log($tel);
 var checkInput = {
 	username(str) {
 		var reg = /^\w{6,14}$/;
@@ -49,15 +48,25 @@ var timer = null;
 var fn = (function() {
 	var $lock = document.querySelector('.lock');
 	var $kuang = document.querySelector('.kuang');
+	var $sub1 = document.querySelector('.biao1 .biao .sub');
+	var $sub2 = document.querySelector('.biao1 .biao2 .sub');
+	console.log($sub1,$sub2);
+	var $biao1 = document.querySelector('.biao1');
+	var $biao = document.querySelector('.biao1 .biao');
+	var $biao2 = document.querySelector('.biao2');
+	var $biao3 = document.querySelector('.biao1 .success');
+	var $liAll = document.querySelectorAll('.header ul li');
+	console.log($liAll);
+	console.log($biao3);
+//	console.log($sub1);
 	var timer = 0;
 	return {
 		init: function() {
 			this.event();
 		},
 		event: function() {
-
+		
 			$lock.onmousedown = function(ev) {
-				console.log(1);
 				ev = ev || window.event;
 				var x = ev.offsetX;
 				var y = ev.offsetY;
@@ -74,6 +83,7 @@ var fn = (function() {
 					if(moveX >= $maxL) {
 						moveX = $maxL;
 						$kuang.style.background = '#00FF00';
+						$kuang.innerHTML = '验证成功';
 						document.onmouseup = null;
 						$kuang.onmousemove = null;
 					}
@@ -106,6 +116,18 @@ var fn = (function() {
 				}, 10)
 
 			}
+               $sub1.onclick = function(){
+				$biao.style.display = 'none';
+				$biao2.style.display = 'block';
+				$liAll[1].className = 'active';
+			}
+                 $sub2.onclick = function(){
+				$biao.style.display = 'none';
+				$biao2.style.display = 'none';
+				$biao3.style.display = 'block';
+				$liAll[2].className = 'active';
+			}
+               
 
 		}
 
