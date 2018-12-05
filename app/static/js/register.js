@@ -82,11 +82,15 @@ var fn = (function() {
 						$b.innerHTML = '内容不可以为空';
 					} else {
 						// 调用对应的方法, 把文本值传入
+						console.log(this.name)
 						console.log(this.name, this.value);
 						var bool = checkInput[this.name](this.value);
 						if(bool) {
 							$b.innerHTML = '验证成功';
 						$sub2.onclick = function() {
+							var $b = document.querySelectorAll('b');
+					         console.log($b.innerHTML);
+							
 				           $biao.style.display = 'none';
 				           $biao2.style.display = 'none';
 				           $biao3.style.display = 'block';
@@ -99,23 +103,27 @@ var fn = (function() {
 						}
 					}
 				}
-				
-				
 			}
-//			console.log(input['password']);
+               //验证密码
               $psd.addEventListener('blur' , function(){
               	 $repsd.onblur();
               	 console.log(11111);
               })
-						// 第二次输入密码
+						// 验证第二次密码
 				$repsd.onblur = function(){
               	  var $b = this.parentNode.nextElementSibling;
-						console.log(2222);
 						if(this.value == $psd.value) {
 							$b.innerHTML = '验证成功';
               }else{
               	          $b.innerHTML = '密码不一致';
               }	}
+				
+				// 当所有的b都为成功时触发
+				$sub2.addEventListener('onclick',function(){
+					var $b = document.querySelectorAll('b');
+					console.log($b);
+					console.log(1);
+				})
 						
               
 			//  第一面的滑块
